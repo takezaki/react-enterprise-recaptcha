@@ -1,6 +1,6 @@
 {
   "name": "react-enterprise-recaptcha",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "A lightweight React wrapper for reCAPTCHA Enterprise with a next-recaptcha-v3–compatible API. Pure client-side, framework-agnostic.",
   "license": "MIT",
   "author": "Shinichiro Takezaki",
@@ -28,16 +28,24 @@
     "dist"
   ],
   "sideEffects": false,
+
   "peerDependencies": {
-    "react": ">=17"
+    "react": ">=17",
+    "react-dom": ">=17"
+  },
+  "peerDependenciesMeta": {
+    "react-dom": { "optional": true }
   },
   "devDependencies": {
     "tsup": "^8.0.0",
-    "typescript": "^5.4.0"
+    "typescript": "^5.4.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
   },
+
   "scripts": {
-    "build": "tsup src/index.tsx --format esm,cjs --dts --clean",
-    "dev": "tsup src/index.tsx --format esm,cjs --dts --watch",
+    "build": "tsup src/index.tsx --format esm,cjs --dts --clean --external react --external react-dom",
+    "dev": "tsup src/index.tsx --format esm,cjs --dts --watch --external react --external react-dom",
     "typecheck": "tsc --noEmit",
     "prepare": "npm run build"
   },
