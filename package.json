@@ -1,10 +1,17 @@
 {
   "name": "react-enterprise-recaptcha",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A lightweight React wrapper for reCAPTCHA Enterprise with a next-recaptcha-v3–compatible API. Pure client-side, framework-agnostic.",
   "license": "MIT",
   "author": "Shinichiro Takezaki",
   "homepage": "https://www.npmjs.com/package/react-enterprise-recaptcha",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/takezaki/react-enterprise-recaptcha.git"
+  },
+  "bugs": {
+    "url": "https://github.com/takezaki/react-enterprise-recaptcha/issues"
+  },
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
