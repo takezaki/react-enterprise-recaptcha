@@ -1,0 +1,51 @@
+{
+  "name": "react-enterprise-recaptcha",
+  "version": "1.0.1",
+  "description": "A lightweight React wrapper for reCAPTCHA Enterprise with a next-recaptcha-v3–compatible API. Pure client-side, framework-agnostic.",
+  "license": "MIT",
+  "author": "Shinichiro Takezaki",
+  "homepage": "https://www.npmjs.com/package/react-enterprise-recaptcha",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "peerDependencies": {
+    "react": ">=17"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0"
+  },
+  "scripts": {
+    "build": "tsup src/index.tsx --format esm,cjs --dts --clean",
+    "dev": "tsup src/index.tsx --format esm,cjs --dts --watch",
+    "typecheck": "tsc --noEmit",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "recaptcha",
+    "recaptcha-enterprise",
+    "react",
+    "captcha",
+    "next-recaptcha-v3",
+    "enterprise"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
